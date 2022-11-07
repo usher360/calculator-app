@@ -1,0 +1,28 @@
+.login-container {
+  padding: 0 10%;
+}
+
+.login-card {
+  color: #000;
+
+  & label {
+    font-size: 1.5em;
+
+    @media only screen and (max-width: 768px) {
+        font-size: 1em;
+    }
+  }
+
+  & input {
+    font-size: 1em;
+
+    @media only screen and (max-width: 768px) {
+      font-size: 0.8em;
+    }
+  }
+}
+
+
+
+
+

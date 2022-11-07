@@ -1,30 +1,23 @@
 import './App.scss';
-import {Col, Container, Row} from "react-bootstrap";
-import Header from "../Header/Header";
-import Content from "../Content/Content";
-import Footer from "../Footer/Footer";
+import {BrowserRouter as Router, Route, Switch, Redirect} from "react-router-dom";
+import {Login} from "../Pages";
+import {useSelector} from "react-redux";
+import Main from "../Pages/Main/Main";
 
 function App() {
+    const currentUser = useSelector((state) => state.currentUser.value);
 
-  return (
-    <div className="App">
-      <Container className="App">
-        <div className="app-header">
-            <Header></Header>
-        </div>
-
-        <Row className="app-content">
-            <Content></Content>
-        </Row>
-
-        <Row className="app-footer">
-            <Footer>
-              Footer
-            </Footer>
-        </Row>
-
-      </Container>
-    </div>
+    return (
+        <Router>
+            <Switch>
+                <Route path="/login">
+                    <Login/>
+                </Route>
+                <Route path="/">
+                    {!currentUser ? <Redirect to="/login" /> : <Main />}
+                </Route>
+            </Switch>
+        </Router>
   );
 }
 
