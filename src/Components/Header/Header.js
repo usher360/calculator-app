@@ -20,25 +20,29 @@ function Header() {
     }
 
     return (
-        <div id="header">
-            <Tabs
-                id="controlled-tab-example"
-                activeKey={location.pathname}
-                onSelect={handleTabClick}
-                className="mb-3"
-            >
-                <Tab eventKey="/" title="Calculator" onClick={handleTabClick}>
-                    <div/>
-                </Tab>
-                <Tab eventKey="/history" title="History" onClick={handleTabClick}>
-                    <div/>
-                </Tab>
-            </Tabs>
+        <div className="header">
+            <div className="header-section">
+                <Tabs
+                    id="controlled-tab-example"
+                    activeKey={location.pathname}
+                    onSelect={handleTabClick}
+                    className="mb-3"
+                >
+                    <Tab eventKey="/" title="Calculator" onClick={handleTabClick}>
+                        <div/>
+                    </Tab>
+                    <Tab eventKey="/history" title="History" onClick={handleTabClick}>
+                        <div/>
+                    </Tab>
+                </Tabs>
+            </div>
 
-            <Button variant="secondary" onClick={handleLogout}>
-                Logout
-            </Button>
-            Hello {currentUser.userName}
+            <div className="header-section">
+                <Button variant="light" onClick={handleLogout}>
+                    Logout
+                </Button>
+                <div>Hello {currentUser.userName}</div>
+            </div>
         </div>
     );
 }

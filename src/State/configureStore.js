@@ -1,11 +1,11 @@
 import {combineReducers, createStore} from 'redux'
-import calcReducer from "./reducers/calcReducer";
+import calc from "./reducers/calcReducer";
 import currentUser from "./reducers/userReducer";
 import buttonHistory from "./reducers/historyReducer";
 
 export default function configureStore(preloadedState) {
     return createStore(combineReducers({
-        calcReducer,
+        calc,
         buttonHistory,
         currentUser,
     }), preloadedState)

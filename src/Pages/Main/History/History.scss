@@ -1,6 +1,18 @@
-#history {
+.history {
   display: flex;
+  flex-direction: column;
   color: #000;
+
+  & .history-list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  & .history-clear-button {
+    display: flex;
+    justify-content: center;
+  }
 }
 
 

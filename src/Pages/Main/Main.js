@@ -10,12 +10,12 @@ function Main() {
 
     return (
         <div className="App">
-            <Container className="App">
-                <Row className="app-header">
+            <div className="App">
+                <div className="app-header">
                     <Header/>
-                </Row>
+                </div>
 
-                <Row className="app-content">
+                <div className="app-content">
                     <Switch>
                         <Route path="/history">
                             <History/>
@@ -24,13 +24,13 @@ function Main() {
                             <Calculator/>
                         </Route>
                     </Switch>
-                </Row>
+                </div>
 
-                <Row className="app-footer">
+                <div className="app-footer">
                     <Footer/>
-                </Row>
+                </div>
 
-            </Container>
+            </div>
         </div>
   );
 }
