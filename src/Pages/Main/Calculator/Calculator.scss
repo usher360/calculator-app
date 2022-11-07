@@ -1,0 +1,27 @@
+.calculator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+
+
+.calc-board {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  & button {
+    flex: 1 0 20%;
+    margin: 5px;
+  }
+
+  & hr {
+    width: 100%;
+  }
+}
+
+
+
